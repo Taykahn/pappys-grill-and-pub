@@ -1,0 +1,29 @@
+.logo {
+	 img {
+		padding-top: 5em;
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.lunch-dinner {
+	h1 {
+		text-align: center;
+		font-size: 2em;
+		padding-bottom: 15px;
+	}
+}
+
+@media (max-width: 736px) {
+.row .lunch-dinner {
+	h1 {
+		text-align: center;
+		font-size: 20px;
+		padding-top: 0px;
+		padding-bottom: 10px;
+		}
+	}
+}

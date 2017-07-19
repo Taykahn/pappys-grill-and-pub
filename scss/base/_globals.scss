@@ -1,0 +1,53 @@
+/*#566268*/
+html, body {
+	overflow-x: hidden; 
+}
+
+body {
+	min-width:320px;
+	font-family: $shadow-font, $daughter-font, $alegreys-font, $primary-font;
+	font-size: 16px;
+	line-height:1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #fff;
+}
+
+.row, 
+.col-sm-12 {
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+h1 {
+	margin: 0px;
+	text-align: center;
+	color: $featured-grey;
+}
+
+.page-header {
+	h2 {
+	text-align: center;
+}
+}
+h3 {
+	color: #090909;
+	font-size: 39px;
+	text-shadow: $text-shadow;
+}
+
+a {
+	color: $h1-grey;
+}
+a:hover {
+  color: rgba(255, 169, 73, .4);
+}
+
+.container, 
+.col-md-12 {
+	padding: 0px;
+}
+
+

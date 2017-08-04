@@ -28,3 +28,8 @@ $pappys_breakfast->mbc_build_cpt( 'pappys-breakfast', 'Pappys Breakfast', 'Pappy
 $slider = new MBC_Theme( 'slider' );
 
 $slider->mbc_build_cpt( 'slider', 'Slider', 'Slider', $supports = array(), $settings = array(), $has_arch = true, $hier = true);
+
+//Instantiate new class object
+$background_images = new MBC_Theme( 'background-images' );
+
+$background_images->mbc_build_cpt( 'Background Images', 'Background Images', 'Background Images', $supports = array(), $settings = array(), $has_arch = true, $hier = true);

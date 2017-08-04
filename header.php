@@ -80,19 +80,19 @@
 
 			<?php if ( is_home() ) { ?>
 
-				<div class="banner no-pad" style="background: url( '<?php echo esc_url( the_field( 'hero', 586 ) ); ?>' ) 50%/cover no-repeat;">
+				<div class="banner no-pad" style="background: url( '<?php echo esc_url( the_field( 'header_background_image', 867 ) ); ?>' ) 50%/cover no-repeat;">
 
 				<div class="wrapper">
 
 					<div class="banner-img">
 
-						<img src="<?php echo esc_url( the_field( 'hero', 590 ) ); ?> ">
+						<img src="<?php echo esc_url( the_field( 'header_logo_image', 867 ) ); ?> ">
 
 					</div><!--end banner-img-->
 
 					<div class="hours"> 
 
-					<?php the_field('content', 200 ); ?>
+						<?php the_field('content', 200 ); ?>
 
 					</div> <!-- end hours -->
 
@@ -100,11 +100,11 @@
 
 						<ul class="social-icon-1">
 
-							<li><a href="#map_section"><img src="<?php echo esc_url( the_field( 'hero', 606 ) ); ?>" alt="facebook logo" class="social-icon"></a></li>
+							<li><a href="#map_section"><img src="<?php echo esc_url( the_field( 'header_map_image', 867 ) ); ?>" alt="facebook logo" class="social-icon"></a></li>
 
-							<li><a href="https://www.facebook.com/Pappys-Grill-Pub-245352765500666/"><img src="<?php echo the_field( 'hero', 603 ) ?>" alt="facebook logo" class="social-icon"></a></li>
+							<li><a href="https://www.facebook.com/Pappys-Grill-Pub-245352765500666/"><img src="<?php echo the_field( 'header_facebook_image', 867 ) ?>" alt="facebook logo" class="social-icon"></a></li>
 
-							<li><a href="tel:816-390-9550"><img src="<?php echo esc_url( the_field( 'hero', 609 ) ); ?>" alt="phone logo" class="social-icon"></a></li>
+							<li><a href="tel:816-390-9550"><img src="<?php echo esc_url( the_field( 'header_phone_image', 867 ) ); ?>" alt="phone logo" class="social-icon"></a></li>
 
 						</ul><!-- end social-icon -->
 
@@ -118,7 +118,7 @@
 
 				<div class="banner-img">
 
-					<img src="<?php echo esc_url( the_field( 'hero', 590 ) ); ?> ">
+					<img src="<?php echo esc_url( the_field( 'header_logo_image', 867 ) ); ?> ">
 
 				</div>
 

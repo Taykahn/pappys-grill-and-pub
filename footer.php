@@ -24,7 +24,7 @@
 
 						<div class="pappys-logo">
 
-							<img src="<?php the_field('hero', 600 ); ?>" alt="Pappys Logo">
+							<img src="<?php the_field('footer_pappys_logo_image', 867 ); ?>" alt="Pappys Logo">
 
 							<p>&copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?></p>
 

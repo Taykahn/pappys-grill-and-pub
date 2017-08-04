@@ -25,7 +25,7 @@ function about_bar_section() {
 
 				<a id="about_section"><div class="col-sm-5"></a>
 
-					<div class="about-img" style="background: url( '<?php echo esc_url( the_field( 'hero', 513 ) ); ?>' ) 50%/cover no-repeat; height: 650px;">
+					<div class="about-img" style="background: url( '<?php echo esc_url( the_field( 'about_us_image', 867 ) ); ?>' ) 50%/cover no-repeat; height: 650px;">
 
 						<p><?php the_field('content', 546 ); ?></p><!-- About Text -->
 
@@ -39,7 +39,7 @@ function about_bar_section() {
 
 				<div class="col-sm-7">
 
-					<div class="bar-img" style="background: url( '<?php echo esc_url( the_field( 'hero', 516 ) ); ?>' ) 50%/cover no-repeat;">
+					<div class="bar-img" style="background: url( '<?php echo esc_url( the_field( 'full_bar_image', 867 ) ); ?>' ) 50%/cover no-repeat;">
 
 						<h1><?php the_field('title', 558 ); ?></h1><!-- Bar Title -->
 
@@ -102,7 +102,7 @@ $specials=new WP_Query( $args );
 
 		<div class="row">
 
-			<div class="parallax" style="background-image: url( '<?php echo esc_url( the_field( 'hero', 504 ) ); ?>' )">
+			<div class="parallax" style="background-image: url( '<?php echo esc_url( the_field( 'single_featured-items_image', 867 ) ); ?>' )">
 
 				<h1>Featured Items &amp Weekly Specials</h1>
 
@@ -181,7 +181,7 @@ function gc_co_rp_section() {
 
 	<div class="row">
 
-		<div class="parallax" style="background-image: url( '<?php echo esc_url( the_field( 'hero', 518 ) ); ?>' )">
+		<div class="parallax" style="background-image: url( '<?php echo esc_url( the_field( 'reservations_image', 867 ) ); ?>' )">
 
 			<div class="row">
 
@@ -288,7 +288,7 @@ function map_location_section() {
 
 				<div class="col-sm-5">
 
-					<div class="location" style="background: url( '<?php echo esc_url( the_field( 'hero', 525 ) ); ?>' ) 50%/cover no-repeat; height: 400px;">
+					<div class="location" style="background: url( '<?php echo esc_url( the_field( 'location_image', 867 ) ); ?>' ) 50%/cover no-repeat; height: 400px;">
 
 					<?php the_field('content', 56 ); ?><!-- Location -->
 

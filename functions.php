@@ -78,100 +78,45 @@ create_widget( 'Front Page Right', 'front-right', 'Displays on the right of the 
 create_widget( 'Contact Page Right', 'contact-right', 'Displays on the side of contact page with a sidebar.' );
 
 /**
- * custom post type function
+ * Add Options Page ACF 
  */
 
-function create_posttype() {
+if( function_exists('acf_add_options_page') ) {
 
-	register_post_type( 'menu-item',
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
 
-	// CPT Options
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Header Settings',
+		'menu_title'	=> 'Header',
+		'parent_slug'	=> 'theme-general-settings',
+	));
 
-		array(
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Footer Settings',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'theme-general-settings',
+	));
 
-			'labels' => array(
-				'name'          => __( 'Menu Item' ),
-				'singular_name' => __( 'Menu Item' )
-			),
-			'public'            => true,
-			'has_archive'       => true,
-			'rewrite'           => array('slug' => 'menu-item'),
-			)
-		);
-	}
+		acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Featured Items Page Settings',
+		'menu_title'	=> 'Featured Items Page',
+		'parent_slug'	=> 'theme-general-settings',
+	));
 
-// Hooking up function to theme setup
-
-add_action( 'init', 'create_posttype' );
-
-function custom_post_type() {
-
-// Set UI labels for Custom Post Type
-
-	$labels = array(
-
-		'name'                => _x( 'Menu-item', 'Post Type General Name' ),
-		'singular_name'       => _x( 'Menu-item', 'Post Type Singular Name' ),
-		'menu_name'           => __( 'Menu-item'),
-		'parent_item_colon'   => __( 'Parent Menu' ),
-		'all_items'           => __( 'All Menus' ),
-		'view_item'           => __( 'View Menu' ),
-		'add_new_item'        => __( 'Add New Item' ),
-		'add_new'             => __( 'Add New' ),
-		'edit_item'           => __( 'Edit Menu' ),
-		'update_item'         => __( 'Update Item' ),
-		'search_items'        => __( 'Search Menu' ),
-		'not_found'           => __( 'Not Found' ),
-		'not_found_in_trash'  => __( 'Not found in Trash' ),
-	);
-// Set other options for Custom Post Type
-
-	$args = array(
-		'label'               => __( 'menu-item' ),
-		'description'         => __( 'menu item description' ),
-		'labels'              => $labels,
-
-		// Features this CPT supports in Post Editor
-		'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'revisions', 'page-attributes' ),
-		/* A hierarchical CPT is like Pages and can have
-		* Parent and child items. A non-hierarchical CPT
-		* is like Posts.
-		*/ 
-		'taxonomies'          => array( 'genres', 'category' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'       => 5,
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'page',
-		);
-
-	// Registering your Custom Post Type
-
-	register_post_type( 'menu-item', $args );
+		acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Specials Page Settings',
+		'menu_title'	=> 'Specials Page Page',
+		'parent_slug'	=> 'theme-general-settings',
+	));
 
 }
 
-/* Hook into the 'init' action so that the function
-* Containing our post type registration is not
-* unnecessarily executed.
-*/
-
-add_action( 'init', 'custom_post_type', 0 );
-
-add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
-
-function add_my_post_types_to_query( $query ) {
-	if ( is_home() && $query->is_main_query() )
-		$query->set( 'post_type', array( 'post', 'menu-item' ) );
-	return $query;
-}
 
 /**
  * Add featured images

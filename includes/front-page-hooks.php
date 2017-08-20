@@ -13,9 +13,19 @@
 
 function about_bar_section() {
 
+	$args = array( 
+		'post_type' => 'full-bar' 
+	);
+
+$full_bar=new WP_Query( $args );
+
+global $post;
+
+$post_id = $post->ID;
+
 ?>
 
-<section class="two-column row no-pad">
+<section class="two-column row no-pad container-fluid">
 
 	<div class="col-sm-12">
 
@@ -25,9 +35,11 @@ function about_bar_section() {
 
 				<a id="about_section"><div class="col-sm-5"></a>
 
-					<div class="about-img" style="background: url( '<?php echo esc_url( the_field( 'about_us_image', 867 ) ); ?>' ) 50%/cover no-repeat; height: 650px;">
+					<div class="about-img" style="background: url( '<?php the_field( 'bkg_img_about_us', $post_id ) ?>' ) 50%/cover no-repeat; height: 650px;">
 
-						<p><?php the_field('content', 546 ); ?></p><!-- About Text -->
+						<h1><?php the_field( 'about_us_title', $post_id ); ?></h1>
+
+						<p><?php the_field( 'about_us_content', $post_id ); ?></p>
 
 					</div><!-- end about-img -->
 
@@ -39,15 +51,11 @@ function about_bar_section() {
 
 				<div class="col-sm-7">
 
-					<div class="bar-img" style="background: url( '<?php echo esc_url( the_field( 'full_bar_image', 867 ) ); ?>' ) 50%/cover no-repeat;">
+					<div class="bar-img" style="background: url( '<?php the_field( 'bkg_img_full_bar', $post_id ); ?>' ) 50%/cover no-repeat;">
 
-						<h1><?php the_field('title', 558 ); ?></h1><!-- Bar Title -->
+					<h1><?php the_field( 'full_bar_title', $post_id ); ?></h1>
 
-						<p><?php the_field('content', 558 ); ?></p><!-- Bar Text -->
-
-					<?php wp_reset_postdata() ?>
-
-					<?php get_post(); ?>
+					<p><?php the_field( 'full_bar_content', $post_id ); ?></p>
 
 				</div><!-- col-sm-7 -->
 
@@ -95,14 +103,19 @@ $featured=new WP_Query( $args );
 
 $specials=new WP_Query( $args );
 
+global $post;
+
+$post_id = $post->ID;
+
 ?>
+
 <section class="two-column row no-pad">
 
 	<div class="col-sm-12">
 
 		<div class="row">
 
-			<div class="parallax" style="background-image: url( '<?php echo esc_url( the_field( 'single_featured-items_image', 867 ) ); ?>' )">
+			<div class="parallax" style="background-image: url( '<?php the_field( 'specials_featured-items_image', $post_id ); ?>' )">
 
 				<h1>Featured Items &amp Weekly Specials</h1>
 
@@ -173,6 +186,10 @@ add_action( 'featured_specials', 'featured_specials_section' );
 
 function gc_co_rp_section() {
 
+global $post;
+
+$post_id = $post->ID;
+
 ?>
 
 <section class="two-column row no-pad">
@@ -181,57 +198,45 @@ function gc_co_rp_section() {
 
 	<div class="row">
 
-		<div class="parallax" style="background-image: url( '<?php echo esc_url( the_field( 'reservations_image', 867 ) ); ?>' )">
+		<div class="parallax" style="background-image: url( '<?php the_field( 'bkg_img_reservation', $post_id ); ?>' )">
 
 			<div class="row">
 
-				<div class="primary-3"><!-- Giftcard -->
+				<div class="primary-3">
 
 					<div class="col-sm-4">
 
-						<h1><?php the_field('title', 194 ); ?></h1>
+						<h1><?php the_field( 'giftcard_title', $post_id ); ?></h1>
 
-						<p><?php the_field('content', 194 ); ?></p>
-
-						<?php wp_reset_postdata() ?>
-
-						<?php get_post(); ?>
+						<p><?php the_field( 'gift_card_content', $post_id ); ?></p>
 
 					</div><!-- end col-sm-4 --> 
 
 				</div><!-- end primary 3 -->
 
-				<div class="secondary-3"><!-- Carry Out -->
+				<div class="secondary-3">
 
 					<div class="col-sm-4">
 
-						<h1><?php the_field('title', 689 ); ?></h1>
+						<h1><?php the_field('carryout_title', $post_id ); ?></h1>
 
-						<p><?php the_field('content', 689 ); ?></p>
+						<p><?php the_field('carryout_content', $post_id ); ?></p>
 
-						<img src="<?php echo esc_url( the_field( 'image', 689 ) ); ?>">
+						<img src="<?php the_field( 'credit_card_image', $post_id ); ?>">
 
-						<h5><?php the_field('text', 689 ); ?></h5>
-
-						<?php wp_reset_postdata() ?>
-
-						<?php get_post(); ?>
+						<h5><?php the_field('sorry_no_checks', $post_id ); ?></h5>
 
 					</div><!-- end col-sm-4 --> 
 
 				</div><!-- end secondary 3 -->
 
-				<div class="tertiary-3"><!-- Rewards Program -->
+				<div class="tertiary-3">
 
 					<div class="col-sm-4">
 
-						<h1><?php the_field('title', 196 ); ?></h1>
+						<h1><?php the_field('rewards_program_title', $post_id ); ?></h1>
 
-						<p><?php the_field('content', 196 ); ?></p>
-
-						<?php wp_reset_postdata() ?>
-
-						<?php get_post(); ?>
+						<p><?php the_field('rewards_program_content', $post_id ); ?></p>
 
 					</div><!-- end col-sm-4 --> 
 
@@ -266,6 +271,10 @@ add_action( 'gc_co_rp', 'gc_co_rp_section' );
 
 function map_location_section() {
 
+global $post;
+
+$post_id = $post->ID;
+
 ?>
 
 <section class="two-column row no-pad">
@@ -278,7 +287,7 @@ function map_location_section() {
 
 				<div class="col-sm-7">
 
-					<?php the_field('content', 69 ); ?><!-- Google Map -->
+					<?php the_field('map', $post_id ); ?>
 
 				</div><!-- end col-sm-7 --> 
 
@@ -288,9 +297,11 @@ function map_location_section() {
 
 				<div class="col-sm-5">
 
-					<div class="location" style="background: url( '<?php echo esc_url( the_field( 'location_image', 867 ) ); ?>' ) 50%/cover no-repeat; height: 400px;">
+					<div class="location" style="background: url( '<?php the_field( 'bkg_img_location', $post_id ); ?>' ) 50%/cover no-repeat; height: 400px;">
 
-					<?php the_field('content', 56 ); ?><!-- Location -->
+					<?php the_field( 'location_title', $post_id ); ?>
+
+					<?php the_field('location_content', $post_id ); ?>
 
 				</div><!-- end col-sm-5 --> 
 
@@ -317,6 +328,10 @@ add_action( 'map_location', 'map_location_section' );
 
 function slider_section() {
 
+global $post;
+
+$post_id = $post->ID;
+
 ?>
 
 <section class="one-column row no-pad">
@@ -327,7 +342,7 @@ function slider_section() {
 
 			<div class="slider">
 
-				<?php the_field('content', 150 ); ?>
+				<?php the_field('slider_content', $post_id ); ?>
 
 			</div><!-- end slider -->
 

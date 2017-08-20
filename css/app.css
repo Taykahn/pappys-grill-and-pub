@@ -327,9 +327,6 @@ a:hover {
 .about-img h1 {
   color: #424546;
   font-size: 59px; }
-  .about-img h1 em {
-    color: rgba(97, 107, 111, 0.47);
-    text-shadow: 2px 2px 10px #000; }
 
 .about-img p {
   padding-top: .5em;

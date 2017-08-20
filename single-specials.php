@@ -23,7 +23,7 @@ get_header();
 
 			<div class="col-md-12">
 
-				<div class="featured-specials-banner  no-pad" style="background: url( '<?php echo esc_url( the_field( 'specials_single_page_image', 867 ) ); ?>' ) 50%/cover no-repeat; ">
+				<div class="featured-specials-banner  no-pad" style="background: url( '<?php echo esc_url( the_field( 'specials_bkgd_img', 'option' ) ); ?>' ) 50%/cover no-repeat; ">
 
 					<h1>Weekly Specials</h1>
 

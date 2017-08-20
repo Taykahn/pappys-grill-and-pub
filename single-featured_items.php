@@ -17,13 +17,15 @@ $featured = new WP_Query( $args );
 
 ?>
 
+
+
 	<div class="container">
 
 		<div class="row">
 
 			<div class="col-md-12">
 
-				<div class="featured-specials-banner no-pad" style="background: url( '<?php echo esc_url( the_field( 'featured_items_single_page_image', 867 ) ); ?>' ) 50%/cover no-repeat; ">
+				<div class="featured-specials-banner no-pad" style="background: url( '<?php the_field( 'featured_items_bkgd_img', 'option' ); ?>' ) 50%/cover no-repeat; ">
 
 				<h1>Featured Items</h1>
 

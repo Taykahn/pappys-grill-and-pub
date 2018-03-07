@@ -94,19 +94,19 @@ $post_id = $post->ID;
 
 						<div class="banner-img">
 
+							<div id="ratings" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+								<span itemprop="ratingValue">4.6</span> stars -
+								based on <span itemprop="reviewCount">203</span> reviews
+							</div>
 							<h1 itemprop="name">Pappy's Grill & Pub</h1>
 							<span itemprop="priceRange">$1.00-$22.99</span>
-							<span itemprop="servesCuisine">Tenderloins</span>,
-							<span itemprop="servesCuisine">Burgers</span>,
-							<span itemprop="servesCuisine">Hot Wings</span>,
-							<span itemprop="servesCuisine">Salads</span>,
+							<span itemprop="servesCuisine">Tenderloins</span>
+							<span itemprop="servesCuisine">Burgers</span>
+							<span itemprop="servesCuisine">Hot Wings</span>
+							<span itemprop="servesCuisine">Salads</span>
 							<span itemprop="servesCuisine">Sandwiches</span>
 
-							<div itemscope itemtype="http://schema.org/ImageObject">
-
-								<img src="<?php echo esc_url( the_field( 'header_logo_image', $post_id ) ); ?> " itemprop="contentUrl">
-
-							</div><!-- itemscope ImageObject -->
+							<img itemprop="image" src="<?php echo esc_url( the_field( 'header_logo_image', $post_id ) ); ?> " itemprop="contentUrl">
 
 						</div><!--end banner-img-->
 

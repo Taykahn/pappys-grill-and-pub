@@ -179,10 +179,6 @@
 	}
 }
 
-.wpsisac-slick-carousal.design-6 {
-	padding-bottom: 0px;
-}
-
 @media (min-width: 1200px) {
 	.about-img 	p {
 		padding-left: 30px;
@@ -253,7 +249,7 @@
 
 @media (max-width: 576px) {
 	.slider {
-		display: none;
+		display: block;
 	}
 	.parallax {
 		height: 100%;

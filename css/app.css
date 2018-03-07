@@ -224,6 +224,12 @@ a:hover {
 .banner {
   height: 710px; }
 
+.banner-img #ratings {
+  display: none; }
+
+.banner-img span {
+  display: none; }
+
 .banner-img img {
   padding-top: 5em;
   text-align: center;
@@ -481,9 +487,6 @@ a:hover {
   font-weight: bold;
   text-shadow: 2px 2px 7px #000; }
 
-.wpsisac-slick-carousal.design-6 {
-  padding-bottom: 0px; }
-
 @media (min-width: 1200px) {
   .about-img p {
     padding-left: 30px;
@@ -532,7 +535,7 @@ a:hover {
 
 @media (max-width: 576px) {
   .slider {
-    display: none; }
+    display: block; }
   .parallax {
     height: 100%; }
   .featured-items

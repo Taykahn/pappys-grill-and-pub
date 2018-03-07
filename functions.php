@@ -26,7 +26,7 @@ function pbg_scripts() {
 		wp_register_script    ( 'respond_js',    'https://oss.maxcdn.com/respond/1.4.2/respond.min.js', '', '', false );
 		$wp_scripts->add_data ( 'html5_shiv',    'conditional', 'lt IE 9' );
 		$wp_scripts->add_data ( 'respond_js',    'conditional', 'lt IE 9' );
-		wp_enqueue_script     ( 'bottstrap_js',  get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
+		wp_enqueue_script     ( 'bootstrap_js',  get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'pbg_scripts' );

@@ -177,13 +177,6 @@ a:hover {
   padding-top: 4px;
   padding-bottom: 4px; }
 
-.current-menu-item > a,
-.current-menu-parent > a {
-  background: #ccc;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px; }
-
 .current-menu-parent li a {
   background: inherit; }
 
@@ -242,6 +235,9 @@ a:hover {
   max-width: 100%;
   height: auto; }
 
+.banner-img h1 {
+  display: none; }
+
 .hours {
   padding-top: 27px; }
   .hours h2 {
@@ -287,6 +283,9 @@ a:hover {
   .social-icon-1 {
     margin-top: 2em; } }
 
+#schema-address {
+  display: none; }
+
 .footer {
   background-color: #989898; }
 
@@ -308,21 +307,33 @@ a:hover {
   max-width: 100%;
   height: auto; }
 
-.parallax {
-  min-height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover; }
-  .parallax h1 {
-    padding-top: 8px;
-    text-shadow: 2px 2px 7px #000;
-    font-weight: bold;
-    font-size: 55px;
-    color: #000; }
+@media (min-width: 1025px) {
+  .parallax {
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover; } }
+
+@media (max-width: 1024px) {
+  .bkgd-img {
+    min-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover; } }
+
+.featured-special-title h1 {
+  padding-top: 8px;
+  text-shadow: 2px 2px 7px #000;
+  font-weight: bold;
+  font-size: 55px;
+  color: #000; }
 
 .about-img h1 {
   color: #424546;
@@ -371,7 +382,7 @@ a:hover {
             border-radius: 2%; }
   .featured-items p,
   .specials p {
-    font-size: 19px;
+    font-size: 16px;
     text-shadow: 2px 2px 7px #000;
     color: #090909;
     font-family: -webkit-pictograph;
@@ -609,8 +620,6 @@ a:hover {
   .featured-specials-banner {
     height: 100%; }
   .col-sm-6 h3 {
-    font-size: 29px; }
-  .page-image img {
-    width: 100%; } }
+    font-size: 29px; } }
 
 /*# sourceMappingURL=app.css.map */

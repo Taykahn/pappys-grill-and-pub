@@ -18,6 +18,10 @@
 		max-width: 100%;
 		height: auto;
 	}
+
+	h1 {
+		display: none;
+	}
 }
 
 .hours {
@@ -79,4 +83,8 @@
 	.social-icon-1 {
 		margin-top: 2em;
 	}
+}
+
+#schema-address {
+	display: none;
 }

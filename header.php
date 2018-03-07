@@ -90,33 +90,59 @@ $post_id = $post->ID;
 
 				<div class="wrapper">
 
-					<div class="banner-img">
+					<div itemscope itemtype="http://schema.org/Restaurant">
 
-						<img src="<?php echo esc_url( the_field( 'header_logo_image', $post_id ) ); ?> ">
+						<div class="banner-img">
 
-					</div><!--end banner-img-->
+							<h1 itemprop="name">Pappy's Grill & Pub</h1>
+							<span itemprop="priceRange">$1.00-$22.99</span>
+							<span itemprop="servesCuisine">Tenderloins</span>,
+							<span itemprop="servesCuisine">Burgers</span>,
+							<span itemprop="servesCuisine">Hot Wings</span>,
+							<span itemprop="servesCuisine">Salads</span>,
+							<span itemprop="servesCuisine">Sandwiches</span>
 
-					<div class="hours"> 
+							<div itemscope itemtype="http://schema.org/ImageObject">
 
-						<?php the_field('hours_of_operation', $post_id ); ?>
+								<img src="<?php echo esc_url( the_field( 'header_logo_image', $post_id ) ); ?> " itemprop="contentUrl">
 
-					</div> <!-- end hours -->
+							</div><!-- itemscope ImageObject -->
 
-					<div class="address-phone">
+						</div><!--end banner-img-->
 
-						<ul class="social-icon-1">
+						<div class="hours"> 
 
-							<li><a href="#map_section"><img src="<?php the_field( 'header_map_image', $post_id ); ?>" alt="facebook logo" class="social-icon"></a></li>
+							<meta itemprop="openingHours" content="Mo-Th 8:00am-9:00pm">
+							<meta itemprop="openingHours" content="Fr-Sa 8:00am-9:30pm">
 
-							<li><a href="https://www.facebook.com/Pappys-Grill-Pub-245352765500666/"><img src="<?php the_field( 'header_facebook_image', $post_id ) ?>" alt="facebook logo" class="social-icon"></a></li>
+							<?php the_field('hours_of_operation', $post_id ); ?>
 
-							<li><a href="tel:816-390-9550"><img src="<?php the_field( 'header_phone_image', $post_id ); ?>" alt="phone logo" class="social-icon"></a></li>
+						</div> <!-- end hours -->
 
-						</ul><!-- end social-icon -->
+						<div class="address-phone">
 
-					</div><!-- end address-phone -->
+							<div id=schema-address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+							<span itemprop="streetAddress">2501 MESSAINE ST.</span>
+							<span itemprop="addressLocality">Saint Joseph</span>,
+							<span itemprop="addressRegion">MO</span> <span itemprop="postalCode">64501</span>
+							<span itemprop="telephone">(816) 390-9550</span>
+							</div>
 
-				</div><!--end wrapper-->
+							<ul class="social-icon-1">
+
+								<li><a href="#map_section"><img src="<?php the_field( 'header_map_image', $post_id ); ?>" alt="facebook logo" class="social-icon"></a></li>
+
+								<li><a href="https://www.facebook.com/Pappys-Grill-Pub-245352765500666/"><img src="<?php the_field( 'header_facebook_image', $post_id ) ?>" alt="facebook logo" class="social-icon"></a></li>
+
+								<li><a itemprop="telephone" href="tel:816-390-9550"><img src="<?php the_field( 'header_phone_image', $post_id ); ?>" alt="phone logo" class="social-icon"></a></li>
+
+							</ul><!-- .social-icon -->
+
+						</div><!-- .address-phone -->
+
+					</div><!-- itemscope -->
+
+				</div><!--.wrapper-->
 
 			</div><!--.banner-->
 
@@ -124,9 +150,9 @@ $post_id = $post->ID;
 
 				<div class="banner-img">
 
-					<img src="<?php echo esc_url( the_field( 'header_logo_image', $post_id ) ); ?> ">
+					<img src="<?php echo esc_url( the_field( 'specials_featured_header', 'option' ) ); ?> ">
 
-				</div>
+				</div><!-- .banner-img -->
 
 			<?php } ?>
 

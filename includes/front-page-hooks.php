@@ -13,9 +13,9 @@
 
 function about_bar_section() {
 
-	$args = array( 
-		'post_type' => 'full-bar' 
-	);
+$args = array( 
+	'post_type' => 'full-bar' 
+);
 
 $full_bar=new WP_Query( $args );
 
@@ -115,9 +115,13 @@ $post_id = $post->ID;
 
 		<div class="row">
 
-			<div class="parallax" style="background-image: url( '<?php the_field( 'specials_featured-items_image', $post_id ); ?>' )">
+			<div class="parallax bkgd-img" style="background-image: url( '<?php the_field( 'specials_featured-items_image', $post_id ); ?>' )">
 
-				<h1>Featured Items &amp Weekly Specials</h1>
+				<div class="featured-special-title">
+
+					<h1>Featured Items &amp Weekly Specials</h1>
+
+				</div><!-- .featured-special-title -->
 
 				<div class="featured-items">
 
@@ -198,57 +202,55 @@ $post_id = $post->ID;
 
 	<div class="row">
 
-		<div class="parallax" style="background-image: url( '<?php the_field( 'bkg_img_reservation', $post_id ); ?>' )">
+		<div class="parallax bkgd-img" style="background-image: url( '<?php the_field( 'bkg_img_reservation', $post_id ); ?>' )">
 
-			<div class="row">
+			<div class="primary-3">
 
-				<div class="primary-3">
+				<div class="col-sm-4">
 
-					<div class="col-sm-4">
+					<h1><?php the_field( 'giftcard_title', $post_id ); ?></h1>
 
-						<h1><?php the_field( 'giftcard_title', $post_id ); ?></h1>
+					<p><?php the_field( 'gift_card_content', $post_id ); ?></p>
 
-						<p><?php the_field( 'gift_card_content', $post_id ); ?></p>
+				</div><!-- end col-sm-4 --> 
 
-					</div><!-- end col-sm-4 --> 
+			</div><!-- end primary 3 -->
 
-				</div><!-- end primary 3 -->
+			<div class="secondary-3">
 
-				<div class="secondary-3">
+				<div class="col-sm-4">
 
-					<div class="col-sm-4">
+					<h1><?php the_field('carryout_title', $post_id ); ?></h1>
 
-						<h1><?php the_field('carryout_title', $post_id ); ?></h1>
+					<p><?php the_field('carryout_content', $post_id ); ?></p>
 
-						<p><?php the_field('carryout_content', $post_id ); ?></p>
+					<img src="<?php the_field( 'credit_card_image', $post_id ); ?>">
 
-						<img src="<?php the_field( 'credit_card_image', $post_id ); ?>">
+					<h5><?php the_field('sorry_no_checks', $post_id ); ?></h5>
 
-						<h5><?php the_field('sorry_no_checks', $post_id ); ?></h5>
+				</div><!-- end col-sm-4 --> 
 
-					</div><!-- end col-sm-4 --> 
+			</div><!-- end secondary 3 -->
 
-				</div><!-- end secondary 3 -->
+			<div class="tertiary-3">
 
-				<div class="tertiary-3">
+				<div class="col-sm-4">
 
-					<div class="col-sm-4">
+					<h1><?php the_field('rewards_program_title', $post_id ); ?></h1>
 
-						<h1><?php the_field('rewards_program_title', $post_id ); ?></h1>
+					<p><?php the_field('rewards_program_content', $post_id ); ?></p>
 
-						<p><?php the_field('rewards_program_content', $post_id ); ?></p>
+				</div><!-- end col-sm-4 --> 
 
-					</div><!-- end col-sm-4 --> 
+			</div><!-- end tertiary 3 -->
 
-				</div><!-- end tertiary 3 -->
+			<div class="button">
 
-			</div><!-- end row -->
+				<a href="tel:8163909550"<button type="button" class="btn btn-primary">CALL TO BOOK A TABLE</button></a>
 
-		<div class="button">
+			</div><!-- end button -->
 
-			<a href="tel:8163909550"<button type="button" class="btn btn-primary">CALL TO BOOK A TABLE</button></a>
-
-		</div><!-- end button -->
+		</div><!-- .parallax -->
 
 	</div><!-- end row -->
 
@@ -299,9 +301,7 @@ $post_id = $post->ID;
 
 					<div class="location" style="background: url( '<?php the_field( 'bkg_img_location', $post_id ); ?>' ) 50%/cover no-repeat; height: 400px;">
 
-					<?php the_field( 'location_title', $post_id ); ?>
-
-					<?php the_field('location_content', $post_id ); ?>
+						<?php the_field('location_content', $post_id ); ?>
 
 				</div><!-- end col-sm-5 --> 
 

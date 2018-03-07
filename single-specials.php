@@ -35,7 +35,7 @@ get_header();
 
 							<div class="page-content">
 
-								<p><?php the_field('text'); ?></p>
+								<p><?php the_content(); ?></p>
 
 							</div><!-- end page-content -->
 

@@ -37,15 +37,15 @@ get_header();
 
 								<p><?php the_content(); ?></p>
 
-							</div><!-- end page-content -->
+							</div><!-- .page-content -->
 
 							<div class="price">
 
 							<p><?php the_field('price'); ?></p>
 
-							</div><!-- end price --> 
+							</div><!-- .price --> 
 
-						</section><!-- end col-md-6 -->
+						</section><!-- .col-md-6 -->
 
 						<section class="col-md-6">
 
@@ -59,9 +59,9 @@ get_header();
 
 							<?php get_post(); ?>
 
-							</div><!-- end page-image -->
+							</div><!-- .page-image -->
 
-						</section><!-- end col-md-6 -->
+						</section><!-- .col-md-6 -->
 
 					<?php endwhile; // end of the loop. ?>
 
@@ -69,11 +69,11 @@ get_header();
 
 					<?php do_action( 'mbc_pagination' ) ?>
 
-				</div>
+				</div><!-- .col-md-12 .options .border-bottom -->
 
-			</div><!-- end col-md-12 -->
+			</div><!-- .col-md-12 -->
 
-		</div><!-- end row -->
+		</div><!-- .row -->
 
 	</div><!-- end container -->
 

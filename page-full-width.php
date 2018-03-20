@@ -21,13 +21,13 @@
 
 							<h1><?php the_title(); ?></h1>
 
-						</div><!-- end page header -->
+						</div><!-- .page header -->
 
 						<div class="wrapper3">
 
 							<?php the_content(); ?>
 
-						</div><!-- end wrapper3 -->
+						</div><!-- .wrapper3 -->
 
 						<?php the_post_thumbnail(); ?>
 
@@ -35,10 +35,10 @@
 
 				<?php endif; ?>
 
-			</div><!-- end col-md-12 -->
+			</div><!-- .col-md-12 -->
 
-		</div><!--end row-->
+		</div><!-- .row -->
 
-	</div><!--end container-->
+	</div><!-- .ontainer -->
 
 <?php get_footer(); ?>

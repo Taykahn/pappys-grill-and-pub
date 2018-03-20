@@ -50,9 +50,9 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 
-						</button><!-- end button -->
+						</button><!-- .navbar-toggle -->
 
-					</div><!-- end navbar-header -->
+					</div><!-- .navbar-header -->
 
 					<div id="navbar" class="navbar-collapse collapse">
 
@@ -68,11 +68,11 @@
 
 							wp_nav_menu( $args ); ?>
 
-					</div><!--/.navbar-collapse -->
+					</div><!-- .navbar-collapse -->
 
-				</div><!-- end container -->
+				</div><!-- .container -->
 
-			</nav><!-- end navbar -->
+			</nav><!-- .navbar -->
 
 	<header>
 
@@ -108,7 +108,7 @@ $post_id = $post->ID;
 
 							<img itemprop="image" src="<?php echo esc_url( the_field( 'header_logo_image', $post_id ) ); ?> " itemprop="contentUrl">
 
-						</div><!--end banner-img-->
+						</div><!-- .banner-img -->
 
 						<div class="hours"> 
 
@@ -117,7 +117,7 @@ $post_id = $post->ID;
 
 							<?php the_field('hours_of_operation', $post_id ); ?>
 
-						</div> <!-- end hours -->
+						</div> <!-- .hours -->
 
 						<div class="address-phone">
 
@@ -156,8 +156,8 @@ $post_id = $post->ID;
 
 			<?php } ?>
 
-		</div><!--end container-->
+		</div><!-- .container -->
 
-	</header><!-- end header -->
+	</header><!-- .header -->
 
 <main id="main" role="main">

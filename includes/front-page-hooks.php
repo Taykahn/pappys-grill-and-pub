@@ -41,11 +41,11 @@ $post_id = $post->ID;
 
 						<p><?php the_field( 'about_us_content', $post_id ); ?></p>
 
-					</div><!-- end about-img -->
+					</div><!-- .about-img -->
 
-				</div><!-- col-sm-5 -->
+				</div><!-- .col-sm-5 -->
 
-			</div><!-- end primary -->
+			</div><!-- .primary -->
 
 			<div class="secondary">
 
@@ -57,15 +57,15 @@ $post_id = $post->ID;
 
 					<p><?php the_field( 'full_bar_content', $post_id ); ?></p>
 
-				</div><!-- col-sm-7 -->
+				</div><!-- .col-sm-7 -->
 
-			</div><!-- end secondary -->
+			</div><!-- .secondary -->
 
-		</div><!-- end row -->
+		</div><!-- .row -->
 
-	</div><!-- end col-sm-12 -->
+	</div><!-- .col-sm-12 -->
 
-</section><!-- two-column row no-pad -->
+</section><!-- .two-column .row .no-pad -->
 
 <?php
 
@@ -141,9 +141,9 @@ $post_id = $post->ID;
 
 					<?php get_post(); ?>
 
-					</div><!-- end col-sm-6 -->
+					</div><!-- .col-sm-6 -->
 
-				</div><!-- end featured items -->
+				</div><!-- .featured items -->
 
 				<div class="specials">
 
@@ -163,17 +163,17 @@ $post_id = $post->ID;
 
 						<?php get_post(); ?>
 
-					</div><!-- end col-sm-6 -->
+					</div><!-- .col-sm-6 -->
 
-				</div><!-- end speacials -->
+				</div><!-- .speacials -->
 
-			</div><!-- end parallax -->
+			</div><!-- .parallax -->
 
-		</div><!-- end row -->
+		</div><!-- .row -->
 
-	</div><!-- end col-md-12 -->
+	</div><!-- .col-md-12 -->
 
-</section><!-- end two-column row no-max pad -->
+</section><!-- .two-column .row .no-max .pad -->
 
 <?php
 
@@ -212,9 +212,9 @@ $post_id = $post->ID;
 
 					<p><?php the_field( 'gift_card_content', $post_id ); ?></p>
 
-				</div><!-- end col-sm-4 --> 
+				</div><!-- .col-sm-4 --> 
 
-			</div><!-- end primary 3 -->
+			</div><!-- .primary 3 -->
 
 			<div class="secondary-3">
 
@@ -228,9 +228,9 @@ $post_id = $post->ID;
 
 					<h5><?php the_field('sorry_no_checks', $post_id ); ?></h5>
 
-				</div><!-- end col-sm-4 --> 
+				</div><!-- .col-sm-4 --> 
 
-			</div><!-- end secondary 3 -->
+			</div><!-- .secondary 3 -->
 
 			<div class="tertiary-3">
 
@@ -240,23 +240,23 @@ $post_id = $post->ID;
 
 					<p><?php the_field('rewards_program_content', $post_id ); ?></p>
 
-				</div><!-- end col-sm-4 --> 
+				</div><!-- .col-sm-4 --> 
 
-			</div><!-- end tertiary 3 -->
+			</div><!-- .tertiary 3 -->
 
 			<div class="button">
 
 				<a href="tel:8163909550"<button type="button" class="btn btn-primary">CALL TO BOOK A TABLE</button></a>
 
-			</div><!-- end button -->
+			</div><!-- .button -->
 
 		</div><!-- .parallax -->
 
-	</div><!-- end row -->
+	</div><!-- .row -->
 
-</div><!-- end col-md-12 -->
+</div><!-- .col-md-12 -->
 
-</section><!-- end three-column row no-max pad -->
+</section><!-- .three-column .row .no-max .pad -->
 
 <?php
 
@@ -291,9 +291,9 @@ $post_id = $post->ID;
 
 					<?php the_field('map', $post_id ); ?>
 
-				</div><!-- end col-sm-7 --> 
+				</div><!-- .col-sm-7 --> 
 
-			</div><!-- end primary 2 -->
+			</div><!-- .primary 2 -->
 
 			<div class="secondary-2">
 
@@ -303,15 +303,15 @@ $post_id = $post->ID;
 
 						<?php the_field('location_content', $post_id ); ?>
 
-				</div><!-- end col-sm-5 --> 
+				</div><!-- .col-sm-5 --> 
 
-			</div><!-- end secondary 2 -->
+			</div><!-- .secondary 2 -->
 
-		</div><!-- end row -->
+		</div><!-- .row -->
 
-	</div><!-- end col-md-12 -->
+	</div><!-- .col-md-12 -->
 
-</section><!-- end two-column row no-max pad -->
+</section><!-- .two-column .row .no-max .pad -->
 
 <?php
 
@@ -344,13 +344,13 @@ $post_id = $post->ID;
 
 				<?php the_field('slider_content', $post_id ); ?>
 
-			</div><!-- end slider -->
+			</div><!-- .slider -->
 
-		</div><!-- end row -->
+		</div><!-- .row -->
 
-	</div><!-- end col-sm-12 -->
+	</div><!-- .col-sm-12 -->
 
-</section><!-- one-column row no-pad -->
+</section><!-- .one-column .row .no-pad -->
 
 <?php
 

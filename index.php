@@ -18,11 +18,11 @@
 
 			<?php endif ?>
 
-		</div><!-- end leader -->
+		</div><!-- .leader -->
 
-	</div><!-- small-12 columns text-center -->
+	</div><!-- .small-12 .columns .text-center -->
 
-</section><!-- row -->
+</section><!-- .row -->
 
 <?php get_sidebar(); ?>
 

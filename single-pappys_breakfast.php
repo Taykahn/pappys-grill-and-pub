@@ -32,14 +32,14 @@ get_header();
 
 						<?php endif; ?>
 
-					</div><!-- end menu -->
+					</div><!-- .menu -->
 
-				</div><!-- end col-md-12 -->
+				</div><!-- .col-md-12 -->
 
-			</section><!-- end three-column row no-max pad -->
+			</section><!-- .three-column .row .no-max .pad -->
 
-		</div><!-- end row -->
+		</div><!-- .row -->
 
-	</div><!-- end container --> 
+	</div><!-- .container --> 
 
 <?php get_footer(); ?>

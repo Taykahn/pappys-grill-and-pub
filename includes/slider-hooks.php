@@ -34,13 +34,13 @@
 
 					<?php endif; ?>
 
-			</div><!-- end slider -->
+			</div><!-- .slider -->
 
-		</div><!-- end row -->
+		</div><!-- .row -->
 
-	</div><!-- end col-sm-12 -->
+	</div><!-- .col-sm-12 -->
 
-</section><!-- one-column row no-pad -->
+</section><!-- .one-column .row .no-pad -->
 
 
 

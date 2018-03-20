@@ -21,62 +21,58 @@ $featured = new WP_Query( $args );
 
 	<div class="container">
 
-		<div class="row">
+		<div class="col-md-12">
 
-			<div class="col-md-12">
+			<div class="featured-specials-banner no-pad" style="background: url( '<?php the_field( 'featured_items_bkgd_img', 'option' ); ?>' ) 50%/cover no-repeat; ">
 
-				<div class="featured-specials-banner no-pad" style="background: url( '<?php the_field( 'featured_items_bkgd_img', 'option' ); ?>' ) 50%/cover no-repeat; ">
+			<h1>Featured Items</h1>
 
-				<h1>Featured Items</h1>
+			<?php while ( $featured->have_posts() ) : $featured->the_post(); ?>
 
-				<?php while ( $featured->have_posts() ) : $featured->the_post(); ?>
+				<section class="col-md-6">
 
-					<section class="col-md-6">
+					<h2><?php the_field('title'); ?></h2>
 
-						<h2><?php the_field('title'); ?></h2>
+					<div class="page-content">
 
-						<div class="page-content">
+						<p><?php the_field('content'); ?></p>
 
-							<p><?php the_field('content'); ?></p>
+					</div><!-- .page-content -->
 
-						</div><!-- end page-content -->
+					<div class="price">
 
-						<div class="price">
+						<p><?php the_field('price'); ?></p>
 
-							<p><?php the_field('price'); ?></p>
+					</div><!-- .price --> 
 
-						</div><!-- end price --> 
+				</section><!-- .col-md-6 -->
 
-					</section><!-- end col-md-6 -->
+				<section class="col-md-6">
 
-					<section class="col-md-6">
+					<div class="page-image">
 
-						<div class="page-image">
+						<?php the_post_thumbnail(); ?>
 
-							<?php the_post_thumbnail(); ?>
+					<br>
 
-						<br>
+					</div><!-- .page-image -->
 
-						</div><!-- end page-image -->
+				</section><!-- .col-md-6 -->
 
-					</section><!-- end col-md-6 -->
+			<?php endwhile; // end of the loop.?>
 
-				<?php endwhile; // end of the loop.?>
+			<div class="col-md-12 options border-bottom">
 
-				<div class="col-md-12 options border-bottom">
+				<?php do_action( 'mbc_pagination' ) ?>
 
-					<?php do_action( 'mbc_pagination' ) ?>
+			</div>
 
-				</div>
+			<?php wp_reset_postdata() ?>
 
-				<?php wp_reset_postdata() ?>
+			<?php get_post(); ?>
 
-				<?php get_post(); ?>
+		</div><!-- .col-md-12 -->
 
-			</div><!-- end col-md-12 -->
-
-		</div><!-- end row -->
-
-	</div><!-- end container -->
+	</div><!-- .container -->
 
 <?php get_footer(); ?>

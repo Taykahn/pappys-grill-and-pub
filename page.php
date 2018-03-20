@@ -14,7 +14,7 @@
 
 							<h1><?php the_title(); ?></h1>
 
-						</div><!-- end page-header -->
+						</div><!-- .page-header -->
 
 						<?php the_content(); ?>
 
@@ -22,10 +22,10 @@
 
 				<?php endif; ?>
 
-			</div><!-- end col-md-9 -->
+			</div><!-- .col-md-9 -->
 
-		</div><!-- end row -->
+		</div><!-- .row -->
 
-	</div><!-- end container -->
+	</div><!-- .container -->
 
 <?php get_footer(); ?>

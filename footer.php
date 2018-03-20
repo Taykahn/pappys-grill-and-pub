@@ -16,7 +16,7 @@
 
 				<div class="col-sm-4">
 
-				</div><!-- end col-sm-4 -->
+				</div><!-- .col-sm-4 -->
 
 				<div class="col-sm-4">
 
@@ -28,21 +28,21 @@
 
 							<p>&copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?></p>
 
-						</div><!-- end pappys-logo -->
+						</div><!-- .pappys-logo -->
 
-					</div><!-- end copyright -->
+					</div><!-- .copyright -->
 
-				</div><!-- end col-sm-4 -->
+				</div><!-- .col-sm-4 -->
 
 				<div class="col-sm-4">
 
-				</div><!-- end col-sm-4 -->
+				</div><!-- .col-sm-4 -->
 
-			</div><!-- end row -->
+			</div><!-- .row -->
 
-		</div><!-- end col-sm-12 -->
+		</div><!-- .col-sm-12 -->
 
-	</section><!-- end two-column -->
+	</section><!-- .two-column -->
 
 </footer>
 
